@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kakar & Lamba General Store</title>
 
@@ -20,6 +20,7 @@ body{
 font-family:'Inter',sans-serif;
 background:#f7f3ed;
 overflow-x:hidden;
+transition:0.4s;
 }
 
 h1,h2,h3,h4{
@@ -28,7 +29,7 @@ font-family:'Cinzel',serif;
 
 .hero{
 background:
-linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
 url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80');
 
 background-size:cover;
@@ -47,6 +48,33 @@ background:#d4a44c;
 background:#071f1c;
 }
 
+.nav-link{
+position:relative;
+}
+
+.nav-link::after{
+content:'';
+position:absolute;
+width:0%;
+height:2px;
+background:#d4a44c;
+left:0;
+bottom:-6px;
+transition:0.4s;
+}
+
+.nav-link:hover::after{
+width:100%;
+}
+
+.card{
+transition:0.5s ease;
+}
+
+.card:hover{
+transform:translateY(-12px);
+}
+
 .card img{
 transition:1s ease;
 }
@@ -55,51 +83,9 @@ transition:1s ease;
 transform:scale(1.08);
 }
 
-.card{
-transition:0.5s ease;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.nav-link{
-position:relative;
-}
-
-.nav-link::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
-background:#d4a44c;
-transition:0.4s;
-}
-
-.nav-link:hover::after{
-width:100%;
-}
-
-.fade{
-animation:fadeUp 1.2s ease;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
 .glass{
+background:rgba(255,255,255,0.06);
 backdrop-filter:blur(14px);
-background:rgba(255,255,255,0.05);
 }
 
 .whatsapp{
@@ -115,7 +101,28 @@ transform:translateY(-8px);
 }
 }
 
+.fade{
+animation:fadeUp 1.3s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(60px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.dark{
+background:#020617;
+color:white;
+}
+
 </style>
+
 </head>
 
 <body>
@@ -126,7 +133,7 @@ transform:translateY(-8px);
 
 <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3">
 
-<p class="tracking-wide">
+<p>
 📍 Akhara Bazaar, Kullu, Himachal Pradesh
 </p>
 
@@ -155,13 +162,15 @@ Serving Families Since 1958
 Kakar & Lamba
 </h1>
 
-<p class="gold text-xs uppercase tracking-[0.4em] mt-1">
+<p class="gold uppercase tracking-[0.4em] text-xs mt-1">
 General Store
 </p>
 
 </div>
 
-<div class="hidden lg:flex gap-8 text-white text-sm uppercase tracking-widest">
+<!-- MENU -->
+
+<div class="hidden xl:flex gap-7 text-white text-[12px] uppercase tracking-[0.2em]">
 
 <a href="#home" class="nav-link hover:text-[#d4a44c] transition">
 Home
@@ -172,11 +181,11 @@ Collections
 </a>
 
 <a href="#heritage" class="nav-link hover:text-[#d4a44c] transition">
-Our Story
+Heritage
 </a>
 
-<a href="#services" class="nav-link hover:text-[#d4a44c] transition">
-Services
+<a href="#tracking" class="nav-link hover:text-[#d4a44c] transition">
+Tracking
 </a>
 
 <a href="#contact" class="nav-link hover:text-[#d4a44c] transition">
@@ -185,13 +194,55 @@ Contact
 
 </div>
 
-<a href="https://wa.me/919805460930"
-target="_blank"
-class="hidden md:block gold-bg hover:bg-[#c79538] text-black px-6 py-3 font-semibold uppercase tracking-widest text-xs transition">
+<!-- RIGHT -->
 
-Order On WhatsApp
+<div class="flex items-center gap-4">
 
-</a>
+<!-- SEARCH -->
+
+<div class="hidden lg:flex items-center bg-white/10 border border-white/10 rounded-full px-4 py-2">
+
+<input
+type="text"
+placeholder="Search..."
+class="bg-transparent outline-none text-sm text-white placeholder:text-stone-400 w-32">
+
+<button class="text-[#d4a44c] ml-2">
+🔍
+</button>
+
+</div>
+
+<!-- DARK MODE -->
+
+<button id="darkToggle"
+class="border border-[#d4a44c] text-[#d4a44c] px-5 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-[#d4a44c] hover:text-black transition">
+
+Dark
+
+</button>
+
+<!-- CART -->
+
+<button class="relative text-white text-2xl hover:text-[#d4a44c] transition">
+
+🛒
+
+<span class="absolute -top-2 -right-2 bg-[#d4a44c] text-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">
+3
+</span>
+
+</button>
+
+<!-- LOGIN -->
+
+<button class="hidden md:block border border-white/20 px-5 py-3 rounded-full text-xs uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition">
+
+Login
+
+</button>
+
+</div>
 
 </div>
 
@@ -205,7 +256,7 @@ Order On WhatsApp
 
 <div class="text-white fade">
 
-<p class="gold uppercase tracking-[0.4em] text-sm mb-5">
+<p class="gold uppercase tracking-[0.3em] text-sm mb-5">
 Trusted For 3 Generations
 </p>
 
@@ -215,23 +266,23 @@ General Store
 </h1>
 
 <p class="text-lg text-stone-300 leading-relaxed mb-10 max-w-xl">
-A timeless legacy of trust, quality and service since 1958.
-Bringing together tradition, premium products and modern convenience for every family.
+A timeless legacy of trust, quality and premium service since 1958.
+Bringing together heritage and modern convenience for today's families.
 </p>
 
 <div class="flex flex-col md:flex-row gap-5">
 
 <a href="#collections"
-class="gold-bg hover:bg-[#be8c31] text-black px-8 py-4 uppercase tracking-[0.2em] font-semibold transition">
+class="gold-bg hover:bg-[#c28f34] text-black px-8 py-4 uppercase tracking-[0.2em] font-semibold transition">
 
 Explore Collections
 
 </a>
 
-<a href="#heritage"
+<a href="#contact"
 class="border border-[#d4a44c] hover:bg-[#d4a44c] hover:text-black text-white px-8 py-4 uppercase tracking-[0.2em] font-semibold transition">
 
-Our Story
+Visit Store
 
 </a>
 
@@ -239,9 +290,9 @@ Our Story
 
 </div>
 
-<!-- SIDE BOX -->
+<!-- PREMIUM SIDE CARD -->
 
-<div class="glass border border-[#d4a44c]/30 p-10 rounded-3xl text-center text-white shadow-2xl">
+<div class="glass border border-[#d4a44c]/30 rounded-3xl p-10 text-center text-white shadow-2xl">
 
 <h2 class="text-7xl gold mb-4">
 70+
@@ -249,15 +300,14 @@ Our Story
 
 <p class="uppercase tracking-[0.3em] text-sm text-stone-300 leading-8">
 Years of Trust <br>
-& Service
+& Heritage
 </p>
 
 <div class="w-24 h-[1px] bg-[#d4a44c] mx-auto my-8"></div>
 
-<p class="text-stone-300 leading-relaxed">
-Quality Products <br>
-Fair Prices <br>
-Honest Service
+<p class="text-stone-300 leading-8">
+Serving generations with honesty,
+quality and family values.
 </p>
 
 </div>
@@ -268,7 +318,7 @@ Honest Service
 
 <!-- FEATURES -->
 
-<section id="services" class="green-bg py-16">
+<section class="green-bg py-20">
 
 <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 text-center text-white">
 
@@ -276,31 +326,31 @@ Honest Service
 <div class="text-5xl mb-4">⭐</div>
 <h3 class="gold text-xl mb-2">Premium Quality</h3>
 <p class="text-stone-400 text-sm">
-Carefully selected products
-</p>
-</div>
-
-<div>
-<div class="text-5xl mb-4">💰</div>
-<h3 class="gold text-xl mb-2">Fair Prices</h3>
-<p class="text-stone-400 text-sm">
-Best value for families
-</p>
-</div>
-
-<div>
-<div class="text-5xl mb-4">🤝</div>
-<h3 class="gold text-xl mb-2">Honest Service</h3>
-<p class="text-stone-400 text-sm">
-Trusted by generations
+Trusted products for every family.
 </p>
 </div>
 
 <div>
 <div class="text-5xl mb-4">🚚</div>
-<h3 class="gold text-xl mb-2">Home Delivery</h3>
+<h3 class="gold text-xl mb-2">Fast Delivery</h3>
 <p class="text-stone-400 text-sm">
-Fast and reliable support
+Quick local delivery support.
+</p>
+</div>
+
+<div>
+<div class="text-5xl mb-4">🤝</div>
+<h3 class="gold text-xl mb-2">Trusted Service</h3>
+<p class="text-stone-400 text-sm">
+Serving Kullu for decades.
+</p>
+</div>
+
+<div>
+<div class="text-5xl mb-4">💳</div>
+<h3 class="gold text-xl mb-2">Digital Payments</h3>
+<p class="text-stone-400 text-sm">
+Modern payment convenience.
 </p>
 </div>
 
@@ -308,7 +358,7 @@ Fast and reliable support
 <div class="text-5xl mb-4">🎁</div>
 <h3 class="gold text-xl mb-2">Loyalty Rewards</h3>
 <p class="text-stone-400 text-sm">
-Special rewards for customers
+Special customer benefits.
 </p>
 </div>
 
@@ -316,20 +366,50 @@ Special rewards for customers
 
 </section>
 
+<!-- FILTERS -->
+
+<section class="py-14">
+
+<div class="flex flex-wrap justify-center gap-4 px-6">
+
+<button class="bg-[#071f1c] text-white px-6 py-3 rounded-full text-sm uppercase tracking-widest">
+All
+</button>
+
+<button class="bg-white border border-stone-300 px-6 py-3 rounded-full text-sm uppercase tracking-widest">
+Beauty
+</button>
+
+<button class="bg-white border border-stone-300 px-6 py-3 rounded-full text-sm uppercase tracking-widest">
+Kitchen
+</button>
+
+<button class="bg-white border border-stone-300 px-6 py-3 rounded-full text-sm uppercase tracking-widest">
+Travel
+</button>
+
+<button class="bg-white border border-stone-300 px-6 py-3 rounded-full text-sm uppercase tracking-widest">
+Baby Care
+</button>
+
+</div>
+
+</section>
+
 <!-- COLLECTIONS -->
 
-<section id="collections" class="py-24">
+<section id="collections" class="pb-24">
 
 <div class="max-w-7xl mx-auto px-6">
 
 <div class="text-center mb-20">
 
 <p class="gold uppercase tracking-[0.3em] text-sm mb-4">
-Our Collections
+Collections
 </p>
 
 <h2 class="text-5xl text-[#071f1c]">
-Everything You Need
+Luxury Everyday Essentials
 </h2>
 
 <div class="w-24 h-1 gold-bg mx-auto mt-6"></div>
@@ -354,7 +434,7 @@ Cosmetics
 </h3>
 
 <p class="text-stone-500">
-Premium beauty and skincare essentials.
+Premium beauty essentials.
 </p>
 
 </div>
@@ -377,7 +457,7 @@ Hosiery
 </h3>
 
 <p class="text-stone-500">
-Comfort wear and winter essentials.
+Comfortable daily essentials.
 </p>
 
 </div>
@@ -400,7 +480,7 @@ Baby Care
 </h3>
 
 <p class="text-stone-500">
-Gentle care for your little ones.
+Gentle products for babies.
 </p>
 
 </div>
@@ -412,18 +492,18 @@ Gentle care for your little ones.
 <div class="card bg-white rounded-3xl overflow-hidden shadow-xl">
 
 <div class="overflow-hidden">
-<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80"
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80"
 class="w-full h-72 object-cover">
 </div>
 
 <div class="p-8 text-center">
 
 <h3 class="text-2xl text-[#071f1c] mb-3">
-Hair Care
+VIP Bags
 </h3>
 
 <p class="text-stone-500">
-Healthy hair products for daily use.
+Premium travel collections.
 </p>
 
 </div>
@@ -456,14 +536,12 @@ Our Heritage
 </p>
 
 <h2 class="text-5xl leading-tight mb-8">
-A Legacy of Trust Since 1958
+A Legacy Since 1958
 </h2>
 
 <p class="text-stone-300 leading-8 mb-10">
-What started as a humble family store in Akhara Bazaar
-has now become a trusted destination for generations.
-We continue to preserve honesty, warmth and premium service
-while embracing modern convenience for today's families.
+What started as a humble family store became one of Kullu's trusted heritage retail destinations.
+We continue to preserve tradition while embracing modern retail experiences.
 </p>
 
 <div class="grid grid-cols-2 gap-8">
@@ -492,7 +570,7 @@ Generations
 <div>
 <h3 class="gold text-4xl mb-2">10000+</h3>
 <p class="text-stone-400 uppercase tracking-widest text-xs">
-Happy Customers
+Customers
 </p>
 </div>
 
@@ -504,17 +582,99 @@ Happy Customers
 
 </section>
 
-<!-- CONTACT -->
+<!-- DELIVERY TRACKING -->
 
-<section id="contact" class="py-24 bg-[#f7f3ed]">
+<section id="tracking" class="py-24 bg-white">
 
 <div class="max-w-4xl mx-auto px-6 text-center">
 
-<p class="gold uppercase tracking-[0.3em] text-sm mb-5">
-Contact Us
+<p class="gold uppercase tracking-[0.3em] text-sm mb-4">
+Track Delivery
 </p>
 
-<h2 class="text-5xl text-[#071f1c] mb-10">
+<h2 class="text-5xl text-[#071f1c] mb-8">
+Track Your Order
+</h2>
+
+<div class="bg-stone-100 p-6 rounded-3xl flex flex-col md:flex-row gap-4 shadow-lg">
+
+<input
+type="text"
+placeholder="Enter Tracking ID"
+class="flex-1 px-6 py-4 rounded-2xl outline-none">
+
+<button class="green-bg hover:bg-[#0f312c] text-white px-10 py-4 rounded-2xl uppercase tracking-widest text-sm transition">
+
+Track
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="py-24 bg-[#f7f3ed]">
+
+<div class="max-w-7xl mx-auto px-6 text-center">
+
+<p class="gold uppercase tracking-[0.3em] text-sm mb-4">
+Testimonials
+</p>
+
+<h2 class="text-5xl text-[#071f1c] mb-16">
+What Customers Say
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-white p-8 rounded-3xl shadow-xl">
+<p class="text-stone-600 leading-8">
+Trusted by our family for generations.
+</p>
+<h3 class="mt-6 font-bold">
+— Local Customer
+</h3>
+</div>
+
+<div class="bg-white p-8 rounded-3xl shadow-xl">
+<p class="text-stone-600 leading-8">
+Excellent quality and service.
+</p>
+<h3 class="mt-6 font-bold">
+— Tourist Customer
+</h3>
+</div>
+
+<div class="bg-white p-8 rounded-3xl shadow-xl">
+<p class="text-stone-600 leading-8">
+One of the best stores in Kullu.
+</p>
+<h3 class="mt-6 font-bold">
+— Family Shopper
+</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="py-24 bg-white">
+
+<div class="max-w-4xl mx-auto px-6 text-center">
+
+<p class="gold uppercase tracking-[0.3em] text-sm mb-4">
+Contact
+</p>
+
+<h2 class="text-5xl text-[#071f1c] mb-8">
 Visit Our Store
 </h2>
 
@@ -526,7 +686,7 @@ Kakar & Lamba General Store
 Akhara Bazaar, Kullu, Himachal Pradesh
 </p>
 
-<div class="space-y-3 mb-12">
+<div class="space-y-3 mb-10">
 
 <p class="text-lg font-semibold">
 📞 +91 9805460930
@@ -564,7 +724,7 @@ WhatsApp Contact 2
 
 <!-- FOOTER -->
 
-<footer class="green-bg border-t border-[#16312d] py-14 text-center text-white">
+<footer class="green-bg py-14 text-center text-white border-t border-[#1f3b36]">
 
 <h3 class="text-3xl mb-4">
 Kakar & Lamba
@@ -595,6 +755,35 @@ Email
 </p>
 
 </footer>
+
+<!-- FLOATING BUTTONS -->
+
+<a href="https://wa.me/919805460930"
+class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl shadow-2xl z-50 transition hover:scale-110">
+
+💬
+
+</a>
+
+<button class="fixed bottom-8 left-8 z-50 w-16 h-16 rounded-full bg-[#071f1c] text-white shadow-2xl text-3xl hover:scale-110 transition">
+
+🤖
+
+</button>
+
+<!-- JS -->
+
+<script>
+
+const darkToggle = document.getElementById('darkToggle');
+
+darkToggle.addEventListener('click',()=>{
+
+document.body.classList.toggle('dark');
+
+});
+
+</script>
 
 </body>
 </html>
