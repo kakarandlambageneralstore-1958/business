@@ -1,178 +1,264 @@
-// draft//
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Kakar and Lamba General Store</title>
+<title>Kakar & Lamba General Store</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-    font-family:'Inter',sans-serif;
-    scroll-behavior:smooth;
+html{
+scroll-behavior:smooth;
 }
 
-h1,h2,h3{
-    font-family:'Playfair Display',serif;
+body{
+font-family:'Inter',sans-serif;
+background:#f7f3ed;
+overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+font-family:'Cinzel',serif;
 }
 
 .hero{
-    background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-    url('https://images.unsplash.com/photo-1534723452862-4c874e70d6f2?auto=format&fit=crop&q=80');
+background:
+linear-gradient(rgba(0,0,0,0.72),rgba(0,0,0,0.72)),
+url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80');
 
-    background-size:cover;
-    background-position:center;
+background-size:cover;
+background-position:center;
 }
 
-.nav-link{
-    position:relative;
+.gold{
+color:#d4a44c;
 }
 
-.nav-link::after{
-    content:'';
-    position:absolute;
-    width:0%;
-    height:2px;
-    background:#d97706;
-    left:0;
-    bottom:-6px;
-    transition:0.4s;
+.gold-bg{
+background:#d4a44c;
 }
 
-.nav-link:hover::after{
-    width:100%;
+.green-bg{
+background:#071f1c;
 }
 
 .card img{
-    transition:0.7s ease;
+transition:1s ease;
 }
 
 .card:hover img{
-    transform:scale(1.08);
+transform:scale(1.08);
 }
 
-.whatsapp{
-    animation:float 2s ease-in-out infinite;
+.card{
+transition:0.5s ease;
 }
 
-@keyframes float{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
+.card:hover{
+transform:translateY(-10px);
+}
+
+.nav-link{
+position:relative;
+}
+
+.nav-link::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:0%;
+height:2px;
+background:#d4a44c;
+transition:0.4s;
+}
+
+.nav-link:hover::after{
+width:100%;
 }
 
 .fade{
-    animation:fadeUp 1.2s ease;
+animation:fadeUp 1.2s ease;
 }
 
 @keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.glass{
+backdrop-filter:blur(14px);
+background:rgba(255,255,255,0.05);
+}
+
+.whatsapp{
+animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
 }
 
 </style>
 </head>
 
-<body class="bg-stone-50 text-slate-900">
+<body>
+
+<!-- TOP BAR -->
+
+<div class="green-bg text-white text-sm py-3 border-b border-[#25413c]">
+
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3">
+
+<p class="tracking-wide">
+📍 Akhara Bazaar, Kullu, Himachal Pradesh
+</p>
+
+<p class="gold uppercase tracking-[0.3em] text-xs">
+Serving Families Since 1958
+</p>
+
+<div class="flex gap-5">
+<p>📞 +91 9805460930</p>
+<p>📞 +91 94180 91450</p>
+</div>
+
+</div>
+
+</div>
 
 <!-- NAVBAR -->
-<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+
+<nav class="sticky top-0 z-50 bg-[#071f1c]/90 backdrop-blur-lg border-b border-[#1f3b36]">
 
 <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-<div class="text-2xl font-bold uppercase tracking-tight">
-Kakar & Lamba
-<span class="text-amber-600">General Store </span>
-<<div class="hidden lg:flex gap-6 text-[12px] uppercase tracking-widest font-semibold flex-wrap">
+<div>
 
-<a href="index.html" class="nav-link hover:text-amber-600 transition">
+<h1 class="text-2xl md:text-3xl text-white">
+Kakar & Lamba
+</h1>
+
+<p class="gold text-xs uppercase tracking-[0.4em] mt-1">
+General Store
+</p>
+
+</div>
+
+<div class="hidden lg:flex gap-8 text-white text-sm uppercase tracking-widest">
+
+<a href="#home" class="nav-link hover:text-[#d4a44c] transition">
 Home
 </a>
 
-<a href="cosmetics.html" class="nav-link hover:text-amber-600 transition">
-Cosmetics
+<a href="#collections" class="nav-link hover:text-[#d4a44c] transition">
+Collections
 </a>
 
-<a href="hosiery.html" class="nav-link hover:text-amber-600 transition">
-Hosiery
+<a href="#heritage" class="nav-link hover:text-[#d4a44c] transition">
+Our Story
 </a>
 
-<a href="babycare.html" class="nav-link hover:text-amber-600 transition">
-Baby Care
+<a href="#services" class="nav-link hover:text-[#d4a44c] transition">
+Services
 </a>
 
-<a href="haircare.html" class="nav-link hover:text-amber-600 transition">
-Hair Care
-</a>
-
-<a href="cookingoil.html" class="nav-link hover:text-amber-600 transition">
-Cooking Oil
-</a>
-
-<a href="crockery.html" class="nav-link hover:text-amber-600 transition">
-Crockery
-</a>
-
-<a href="plastic.html" class="nav-link hover:text-amber-600 transition">
-Plastic Goods
-</a>
-
-<a href="vipbags.html" class="nav-link hover:text-amber-600 transition">
-VIP Bags
-</a>
-
-<a href="contact.html" class="nav-link hover:text-amber-600 transition">
+<a href="#contact" class="nav-link hover:text-[#d4a44c] transition">
 Contact
 </a>
 
 </div>
+
+<a href="https://wa.me/919805460930"
+target="_blank"
+class="hidden md:block gold-bg hover:bg-[#c79538] text-black px-6 py-3 font-semibold uppercase tracking-widest text-xs transition">
+
+Order On WhatsApp
+
+</a>
 
 </div>
 
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero min-h-screen flex items-center justify-center text-center text-white px-6">
 
-<div class="max-w-4xl fade">
+<section id="home" class="hero min-h-screen flex items-center">
 
-<span class="uppercase tracking-[0.3em] text-amber-400 text-sm font-semibold">
-EST. 1958
-</span>
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
-<h1 class="text-5xl md:text-7xl mt-6 mb-8 leading-tight">
-First General Store<br>
-of its Time in Kullu District
-</h1>
+<div class="text-white fade">
 
-<p class="text-lg md:text-xl text-stone-200 mb-10">
-68 years of trust, quality and tradition serving generations from Akhara Bazaar, Kullu.
+<p class="gold uppercase tracking-[0.4em] text-sm mb-5">
+Trusted For 3 Generations
 </p>
 
-<div class="flex flex-col md:flex-row justify-center gap-4">
+<h1 class="text-5xl md:text-7xl leading-tight mb-8">
+Kullu's Heritage <br>
+General Store
+</h1>
+
+<p class="text-lg text-stone-300 leading-relaxed mb-10 max-w-xl">
+A timeless legacy of trust, quality and service since 1958.
+Bringing together tradition, premium products and modern convenience for every family.
+</p>
+
+<div class="flex flex-col md:flex-row gap-5">
 
 <a href="#collections"
-class="bg-amber-600 hover:bg-amber-700 px-8 py-4 font-bold tracking-widest text-sm transition">
-EXPLORE COLLECTIONS
+class="gold-bg hover:bg-[#be8c31] text-black px-8 py-4 uppercase tracking-[0.2em] font-semibold transition">
+
+Explore Collections
+
 </a>
 
-<a href="#contact"
-class="bg-white text-slate-900 hover:bg-stone-200 px-8 py-4 font-bold tracking-widest text-sm transition">
-CONTACT STORE
+<a href="#heritage"
+class="border border-[#d4a44c] hover:bg-[#d4a44c] hover:text-black text-white px-8 py-4 uppercase tracking-[0.2em] font-semibold transition">
+
+Our Story
+
 </a>
+
+</div>
+
+</div>
+
+<!-- SIDE BOX -->
+
+<div class="glass border border-[#d4a44c]/30 p-10 rounded-3xl text-center text-white shadow-2xl">
+
+<h2 class="text-7xl gold mb-4">
+70+
+</h2>
+
+<p class="uppercase tracking-[0.3em] text-sm text-stone-300 leading-8">
+Years of Trust <br>
+& Service
+</p>
+
+<div class="w-24 h-[1px] bg-[#d4a44c] mx-auto my-8"></div>
+
+<p class="text-stone-300 leading-relaxed">
+Quality Products <br>
+Fair Prices <br>
+Honest Service
+</p>
 
 </div>
 
@@ -180,29 +266,49 @@ CONTACT STORE
 
 </section>
 
-<!-- STATS -->
-<section class="bg-slate-900 text-white py-20">
+<!-- FEATURES -->
 
-<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+<section id="services" class="green-bg py-16">
+
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 text-center text-white">
 
 <div>
-<h3 class="text-5xl text-amber-500 mb-3">1958</h3>
-<p class="uppercase tracking-widest text-xs text-stone-400">
-Founding Year
+<div class="text-5xl mb-4">⭐</div>
+<h3 class="gold text-xl mb-2">Premium Quality</h3>
+<p class="text-stone-400 text-sm">
+Carefully selected products
 </p>
 </div>
 
 <div>
-<h3 class="text-5xl text-amber-500 mb-3">3</h3>
-<p class="uppercase tracking-widest text-xs text-stone-400">
-Generations
+<div class="text-5xl mb-4">💰</div>
+<h3 class="gold text-xl mb-2">Fair Prices</h3>
+<p class="text-stone-400 text-sm">
+Best value for families
 </p>
 </div>
 
 <div>
-<h3 class="text-5xl text-amber-500 mb-3">5000+</h3>
-<p class="uppercase tracking-widest text-xs text-stone-400">
-Products
+<div class="text-5xl mb-4">🤝</div>
+<h3 class="gold text-xl mb-2">Honest Service</h3>
+<p class="text-stone-400 text-sm">
+Trusted by generations
+</p>
+</div>
+
+<div>
+<div class="text-5xl mb-4">🚚</div>
+<h3 class="gold text-xl mb-2">Home Delivery</h3>
+<p class="text-stone-400 text-sm">
+Fast and reliable support
+</p>
+</div>
+
+<div>
+<div class="text-5xl mb-4">🎁</div>
+<h3 class="gold text-xl mb-2">Loyalty Rewards</h3>
+<p class="text-stone-400 text-sm">
+Special rewards for customers
 </p>
 </div>
 
@@ -211,191 +317,222 @@ Products
 </section>
 
 <!-- COLLECTIONS -->
-<section id="collections" class="py-24 max-w-7xl mx-auto px-6">
+
+<section id="collections" class="py-24">
+
+<div class="max-w-7xl mx-auto px-6">
 
 <div class="text-center mb-20">
 
-<h2 class="text-5xl mb-5">
+<p class="gold uppercase tracking-[0.3em] text-sm mb-4">
 Our Collections
+</p>
+
+<h2 class="text-5xl text-[#071f1c]">
+Everything You Need
 </h2>
 
-<div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+<div class="w-24 h-1 gold-bg mx-auto mt-6"></div>
 
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-<!-- COSMETICS -->
-<a href="cosmetics.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
+<!-- CARD -->
+
+<div class="card bg-white rounded-3xl overflow-hidden shadow-xl">
 
 <div class="overflow-hidden">
 <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80"
 class="w-full h-72 object-cover">
 </div>
 
-<div class="p-6">
-<h3 class="text-2xl mb-3">Cosmetics</h3>
-<p class="text-stone-500 text-sm">
-Beauty essentials, skincare, makeup and premium cosmetic products.
+<div class="p-8 text-center">
+
+<h3 class="text-2xl text-[#071f1c] mb-3">
+Cosmetics
+</h3>
+
+<p class="text-stone-500">
+Premium beauty and skincare essentials.
 </p>
+
 </div>
 
-</a>
+</div>
 
-<!-- HOSIERY -->
-<a href="hosiery.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
+<!-- CARD -->
+
+<div class="card bg-white rounded-3xl overflow-hidden shadow-xl">
 
 <div class="overflow-hidden">
 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80"
 class="w-full h-72 object-cover">
 </div>
 
-<div class="p-6">
-<h3 class="text-2xl mb-3">Hosiery Items</h3>
-<p class="text-stone-500 text-sm">
-Comfortable daily wear, socks, thermals and innerwear essentials.
+<div class="p-8 text-center">
+
+<h3 class="text-2xl text-[#071f1c] mb-3">
+Hosiery
+</h3>
+
+<p class="text-stone-500">
+Comfort wear and winter essentials.
 </p>
+
 </div>
 
-</a>
+</div>
 
-<!-- BABY CARE -->
-<a href="babycare.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
+<!-- CARD -->
+
+<div class="card bg-white rounded-3xl overflow-hidden shadow-xl">
 
 <div class="overflow-hidden">
 <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80"
 class="w-full h-72 object-cover">
 </div>
 
-<div class="p-6">
-<h3 class="text-2xl mb-3">Baby Care Products</h3>
-<p class="text-stone-500 text-sm">
-Baby soaps, powders, diapers and newborn care essentials.
+<div class="p-8 text-center">
+
+<h3 class="text-2xl text-[#071f1c] mb-3">
+Baby Care
+</h3>
+
+<p class="text-stone-500">
+Gentle care for your little ones.
 </p>
+
 </div>
 
-</a>
+</div>
 
-<!-- HAIR CARE -->
-<a href="haircare.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
+<!-- CARD -->
+
+<div class="card bg-white rounded-3xl overflow-hidden shadow-xl">
 
 <div class="overflow-hidden">
 <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80"
 class="w-full h-72 object-cover">
 </div>
 
-<div class="p-6">
-<h3 class="text-2xl mb-3">Hair Care Products</h3>
-<p class="text-stone-500 text-sm">
-Hair oils, shampoos, conditioners and styling products.
+<div class="p-8 text-center">
+
+<h3 class="text-2xl text-[#071f1c] mb-3">
+Hair Care
+</h3>
+
+<p class="text-stone-500">
+Healthy hair products for daily use.
 </p>
+
 </div>
 
-</a>
-
-<!-- COOKING OIL -->
-<a href="cookingoil.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
-
-<div class="overflow-hidden">
-<img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80"
-class="w-full h-72 object-cover">
 </div>
 
-<div class="p-6">
-<h3 class="text-2xl mb-3">Cooking Oil</h3>
-<p class="text-stone-500 text-sm">
-Trusted healthy cooking oils for every household.
-</p>
 </div>
-
-</a>
-
-<!-- CROCKERY -->
-<a href="crockery.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
-
-<div class="overflow-hidden">
-<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80"
-class="w-full h-72 object-cover">
-</div>
-
-<div class="p-6">
-<h3 class="text-2xl mb-3">Crockery Items</h3>
-<p class="text-stone-500 text-sm">
-Elegant kitchenware, cups, plates and dining collections.
-</p>
-</div>
-
-</a>
-
-<!-- PLASTIC GOODS -->
-<a href="plastic.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
-
-<div class="overflow-hidden">
-<img src="https://images.unsplash.com/photo-1583947582886-f40ec95dd752?auto=format&fit=crop&q=80"
-class="w-full h-72 object-cover">
-</div>
-
-<div class="p-6">
-<h3 class="text-2xl mb-3">Plastic Goods</h3>
-<p class="text-stone-500 text-sm">
-Storage containers, household items and utility products.
-</p>
-</div>
-
-</a>
-
-<!-- VIP BAGS -->
-<a href="vipbags.html"
-class="card bg-white rounded-2xl overflow-hidden shadow-lg block hover:-translate-y-2 transition duration-300">
-
-<div class="overflow-hidden">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80"
-class="w-full h-72 object-cover">
-</div>
-
-<div class="p-6">
-<h3 class="text-2xl mb-3">VIP Sky Bags & Suitcases</h3>
-<p class="text-stone-500 text-sm">
-Premium travel bags, luggage and branded suitcases.
-</p>
-</div>
-
-</a>
 
 </div>
 
 </section>
+
+<!-- HERITAGE -->
+
+<section id="heritage" class="green-bg py-24">
+
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80"
+class="rounded-3xl shadow-2xl">
+
+</div>
+
+<div class="text-white">
+
+<p class="gold uppercase tracking-[0.3em] text-sm mb-5">
+Our Heritage
+</p>
+
+<h2 class="text-5xl leading-tight mb-8">
+A Legacy of Trust Since 1958
+</h2>
+
+<p class="text-stone-300 leading-8 mb-10">
+What started as a humble family store in Akhara Bazaar
+has now become a trusted destination for generations.
+We continue to preserve honesty, warmth and premium service
+while embracing modern convenience for today's families.
+</p>
+
+<div class="grid grid-cols-2 gap-8">
+
+<div>
+<h3 class="gold text-4xl mb-2">1958</h3>
+<p class="text-stone-400 uppercase tracking-widest text-xs">
+Established
+</p>
+</div>
+
+<div>
+<h3 class="gold text-4xl mb-2">5000+</h3>
+<p class="text-stone-400 uppercase tracking-widest text-xs">
+Products
+</p>
+</div>
+
+<div>
+<h3 class="gold text-4xl mb-2">3</h3>
+<p class="text-stone-400 uppercase tracking-widest text-xs">
+Generations
+</p>
+</div>
+
+<div>
+<h3 class="gold text-4xl mb-2">10000+</h3>
+<p class="text-stone-400 uppercase tracking-widest text-xs">
+Happy Customers
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- CONTACT -->
-<section id="contact" class="bg-white py-24">
+
+<section id="contact" class="py-24 bg-[#f7f3ed]">
 
 <div class="max-w-4xl mx-auto px-6 text-center">
 
-<h2 class="text-5xl mb-8">
+<p class="gold uppercase tracking-[0.3em] text-sm mb-5">
+Contact Us
+</p>
+
+<h2 class="text-5xl text-[#071f1c] mb-10">
 Visit Our Store
 </h2>
 
-<p class="text-xl text-stone-600 mb-4">
-Kakar and Lamba General Store
+<p class="text-xl text-stone-600 mb-3">
+Kakar & Lamba General Store
 </p>
 
-<p class="text-stone-500 mb-3">
+<p class="text-stone-500 mb-8">
 Akhara Bazaar, Kullu, Himachal Pradesh
 </p>
 
-<div class="space-y-2 mb-10">
+<div class="space-y-3 mb-12">
 
-<p class="font-semibold text-lg">
+<p class="text-lg font-semibold">
 📞 +91 9805460930
 </p>
 
-<p class="font-semibold text-lg">
+<p class="text-lg font-semibold">
 📞 +91 94180 91450
 </p>
 
@@ -405,17 +542,17 @@ Akhara Bazaar, Kullu, Himachal Pradesh
 
 <a href="https://wa.me/919805460930"
 target="_blank"
-class="whatsapp bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold tracking-widest text-sm shadow-xl transition">
+class="whatsapp bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-full uppercase tracking-[0.2em] text-sm font-semibold transition shadow-2xl">
 
-WHATSAPP CONTACT 1
+WhatsApp Contact 1
 
 </a>
 
 <a href="https://wa.me/919418091450"
 target="_blank"
-class="whatsapp bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold tracking-widest text-sm shadow-xl transition">
+class="whatsapp bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-full uppercase tracking-[0.2em] text-sm font-semibold transition shadow-2xl">
 
-WHATSAPP CONTACT 2
+WhatsApp Contact 2
 
 </a>
 
@@ -426,34 +563,35 @@ WHATSAPP CONTACT 2
 </section>
 
 <!-- FOOTER -->
-<footer class="bg-stone-100 border-t border-stone-200 py-12 text-center">
 
-<h3 class="uppercase tracking-tight font-bold text-2xl mb-4">
-Kakar and Lamba General Store
+<footer class="green-bg border-t border-[#16312d] py-14 text-center text-white">
+
+<h3 class="text-3xl mb-4">
+Kakar & Lamba
 </h3>
 
-<p class="text-stone-500 mb-5">
+<p class="gold uppercase tracking-[0.3em] text-xs mb-6">
 Serving Kullu Since 1958
 </p>
 
-<div class="flex justify-center gap-6 text-stone-400 mb-8">
+<div class="flex justify-center gap-8 mb-8 text-stone-400">
 
-<a href="#" class="hover:text-amber-600 transition">
+<a href="#" class="hover:text-[#d4a44c] transition">
 Instagram
 </a>
 
-<a href="#" class="hover:text-amber-600 transition">
+<a href="#" class="hover:text-[#d4a44c] transition">
 Facebook
 </a>
 
-<a href="#" class="hover:text-amber-600 transition">
+<a href="#" class="hover:text-[#d4a44c] transition">
 Email
 </a>
 
 </div>
 
-<p class="text-[10px] uppercase tracking-widest text-stone-400">
-© 1958 - 2026 Kakar and Lamba General Store. All Rights Reserved.
+<p class="text-stone-500 text-sm">
+© 1958 - 2026 Kakar & Lamba General Store. All Rights Reserved.
 </p>
 
 </footer>
