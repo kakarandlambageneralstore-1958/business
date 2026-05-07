@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kakar and Lamba General Store</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
+}
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1534723452862-4c874e70d6f2?auto=format&fit=crop&q=80');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.nav-link{
+    position:relative;
+}
+
+.nav-link::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height:2px;
+    background:#d97706;
+    left:0;
+    bottom:-6px;
+    transition:0.4s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+.card img{
+    transition:0.7s ease;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.whatsapp{
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+.fade{
+    animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+</style>
+</head>
+
+<body class="bg-stone-50 text-slate-900">
+
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 shadow-sm">
+
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+<div class="text-2xl font-bold uppercase tracking-tight">
+Kakar & Lamba
+<span class="text-amber-600">General Store</span>
+</div>
+
+<div class="hidden lg:flex gap-6 text-[12px] uppercase tracking-widest font-semibold flex-wrap">
+
+<a href="#home" class="nav-link hover:text-amber-600">Home</a>
+
+<a href="#cosmetics" class="nav-link hover:text-amber-600">Cosmetics</a>
+
+<a href="#hosiery" class="nav-link hover:text-amber-600">Hosiery</a>
+
+<a href="#babycare" class="nav-link hover:text-amber-600">Baby Care</a>
+
+<a href="#haircare" class="nav-link hover:text-amber-600">Hair Care</a>
+
+<a href="#cookingoil" class="nav-link hover:text-amber-600">Cooking Oil</a>
+
+<a href="#crockery" class="nav-link hover:text-amber-600">Crockery</a>
+
+<a href="#plastic" class="nav-link hover:text-amber-600">Plastic Goods</a>
+
+<a href="#vipbags" class="nav-link hover:text-amber-600">VIP Bags</a>
+
+<a href="#contact" class="nav-link hover:text-amber-600">Contact</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero min-h-screen flex items-center justify-center text-center text-white px-6">
+
+<div class="max-w-4xl fade">
+
+<span class="uppercase tracking-[0.3em] text-amber-400 text-sm font-semibold">
+EST. 1958
+</span>
+
+<h1 class="text-5xl md:text-7xl mt-6 mb-8 leading-tight">
+First General Store<br>
+of its Time in Kullu District
+</h1>
+
+<p class="text-lg md:text-xl text-stone-200 mb-10">
+68 years of trust, quality and tradition serving generations from Akhara Bazaar, Kullu.
+</p>
+
+<div class="flex flex-col md:flex-row justify-center gap-4">
+
+<a href="#collections"
+class="bg-amber-600 hover:bg-amber-700 px-8 py-4 font-bold tracking-widest text-sm transition">
+EXPLORE COLLECTIONS
+</a>
+
+<a href="#contact"
+class="bg-white text-slate-900 hover:bg-stone-200 px-8 py-4 font-bold tracking-widest text-sm transition">
+CONTACT STORE
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+<section class="bg-slate-900 text-white py-20">
+
+<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+
+<div>
+<h3 class="text-5xl text-amber-500 mb-3">1958</h3>
+<p class="uppercase tracking-widest text-xs text-stone-400">
+Founding Year
+</p>
+</div>
+
+<div>
+<h3 class="text-5xl text-amber-500 mb-3">3</h3>
+<p class="uppercase tracking-widest text-xs text-stone-400">
+Generations
+</p>
+</div>
+
+<div>
+<h3 class="text-5xl text-amber-500 mb-3">5000+</h3>
+<p class="uppercase tracking-widest text-xs text-stone-400">
+Products
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- COLLECTIONS -->
+<section id="collections" class="py-24 max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-20">
+
+<h2 class="text-5xl mb-5">
+Our Collections
+</h2>
+
+<div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+<!-- COSMETICS -->
+<div id="cosmetics" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Cosmetics</h3>
+
+<p class="text-stone-500 text-sm">
+Beauty essentials, skincare, makeup and premium cosmetic products.
+</p>
+
+</div>
+
+</div>
+
+<!-- HOSIERY -->
+<div id="hosiery" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Hosiery Items</h3>
+
+<p class="text-stone-500 text-sm">
+Comfortable daily wear, socks, thermals and innerwear essentials.
+</p>
+
+</div>
+
+</div>
+
+<!-- BABY CARE -->
+<div id="babycare" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Baby Care Products</h3>
+
+<p class="text-stone-500 text-sm">
+Baby soaps, powders, diapers and newborn care essentials.
+</p>
+
+</div>
+
+</div>
+
+<!-- HAIR CARE -->
+<div id="haircare" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Hair Care Products</h3>
+
+<p class="text-stone-500 text-sm">
+Hair oils, shampoos, conditioners and styling products.
+</p>
+
+</div>
+
+</div>
+
+<!-- COOKING OIL -->
+<div id="cookingoil" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Cooking Oil</h3>
+
+<p class="text-stone-500 text-sm">
+Trusted healthy cooking oils for every household.
+</p>
+
+</div>
+
+</div>
+
+<!-- CROCKERY -->
+<div id="crockery" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Crockery Items</h3>
+
+<p class="text-stone-500 text-sm">
+Elegant kitchenware, cups, plates and dining collections.
+</p>
+
+</div>
+
+</div>
+
+<!-- PLASTIC GOODS -->
+<div id="plastic" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1583947582886-f40ec95dd752?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">Plastic Goods</h3>
+
+<p class="text-stone-500 text-sm">
+Storage containers, household items and utility products.
+</p>
+
+</div>
+
+</div>
+
+<!-- VIP BAGS -->
+<div id="vipbags" class="card bg-white rounded-2xl overflow-hidden shadow-lg">
+
+<div class="overflow-hidden">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80"
+class="w-full h-72 object-cover">
+</div>
+
+<div class="p-6">
+
+<h3 class="text-2xl mb-3">VIP Sky Bags & Suitcases</h3>
+
+<p class="text-stone-500 text-sm">
+Premium travel bags, luggage and branded suitcases.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-white py-24">
+
+<div class="max-w-4xl mx-auto px-6 text-center">
+
+<h2 class="text-5xl mb-8">
+Visit Our Store
+</h2>
+
+<p class="text-xl text-stone-600 mb-4">
+Kakar and Lamba General Store
+</p>
+
+<p class="text-stone-500 mb-3">
+Akhara Bazaar, Kullu, Himachal Pradesh
+</p>
+
+<div class="space-y-2 mb-10">
+
+<p class="font-semibold text-lg">
+📞 +91 9805460930
+</p>
+
+<p class="font-semibold text-lg">
+📞 +91 94180 91450
+</p>
+
+</div>
+
+<div class="flex flex-col md:flex-row justify-center gap-5">
+
+<a href="https://wa.me/919805460930"
+target="_blank"
+class="whatsapp bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold tracking-widest text-sm shadow-xl transition">
+
+WHATSAPP CONTACT 1
+
+</a>
+
+<a href="https://wa.me/919418091450"
+target="_blank"
+class="whatsapp bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold tracking-widest text-sm shadow-xl transition">
+
+WHATSAPP CONTACT 2
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-stone-100 border-t border-stone-200 py-12 text-center">
+
+<h3 class="uppercase tracking-tight font-bold text-2xl mb-4">
+Kakar and Lamba General Store
+</h3>
+
+<p class="text-stone-500 mb-5">
+Serving Kullu Since 1958
+</p>
+
+<div class="flex justify-center gap-6 text-stone-400 mb-8">
+
+<a href="#" class="hover:text-amber-600 transition">
+Instagram
+</a>
+
+<a href="#" class="hover:text-amber-600 transition">
+Facebook
+</a>
+
+<a href="#" class="hover:text-amber-600 transition">
+Email
+</a>
+
+</div>
+
+<p class="text-[10px] uppercase tracking-widest text-stone-400">
+© 1958 - 2026 Kakar and Lamba General Store. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
